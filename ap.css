@@ -1,0 +1,122 @@
+:root {
+    --bg-color: #fff0f5;
+    --text-color: #000000;
+    --some-bg: #ff7cbd;
+    --nav-bg-gradient: linear-gradient(135deg, #ffb3c6, #ff8da1);
+    --element-bg: #ffcce0;
+    --button-gradient: linear-gradient(-45deg, #ff69b4, #ff1493);
+    --border-color: #ff309f;
+    --link-color: #d10069;
+
+}
+
+body.dark-mode {
+    --bg-color: #1a0024;
+    --text-color: #ffffff;
+    --some-bg: rgb(114, 0, 163);
+    --nav-bg-gradient: linear-gradient(135deg, #9f00d4, #680082);
+    --element-bg: rgb(73, 0, 105);
+    --button-gradient: linear-gradient(-45deg, rgb(253, 125, 255), #8400ff 80%);
+    --border-color: rgb(196, 118, 255);
+    --link-color: #e0aaff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--nav-bg-gradient);
+    padding: 10px 20px;
+    border-radius: 0 0 50px 50px;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--element-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px 120px;
+    border-radius: 50px;
+    background-color: var(--element-bg);
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+#a_p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+#btn {
+    border-radius: 50px;
+    margin: 10px;
+    background: var(--button-gradient);
+    padding: 12px 30px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s;
+}
+
+#btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+#btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#ig {
+    border: 3px solid var(--border-color);
+    border-radius: 50px;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--some-bg);
+    color: var(--text-color);
+}
+
+#ig a {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-color);
+}
