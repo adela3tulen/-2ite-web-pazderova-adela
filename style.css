@@ -71,7 +71,7 @@ section {
 
 
 #uvod {
-    margin-top: 120px;
+    margin-top: 50px;
     max-height: 100vh;
     height: 80vw;
     padding: 0;
@@ -233,6 +233,23 @@ section p a {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+
+    #uvod {
+        height: auto;
+        min-height: 50vh;
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .hello-text {
+        white-space: normal;
+        font-size: 10vw;
+        line-height: 1.2;
+    }
+
     nav {
         border-radius: 0 0 20px 20px;
         padding: 10px;
