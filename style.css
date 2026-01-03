@@ -71,7 +71,9 @@ section {
 
 
 #uvod {
-    height: 100vh;
+    margin-top: 120px;
+    max-height: 100vh;
+    height: 80vw;
     padding: 0;
     /*margin-top: 170px;*/
     display: flex;
@@ -96,7 +98,8 @@ section {
 }
 
 .hello-text {
-    font-size: 5rem;
+    max-width: 100%;
+    font-size: 8vw;
     font-weight: 700;
     margin: 0;
     text-align: center;
