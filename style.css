@@ -265,4 +265,9 @@ section p a {
         max-width: 300px;
         margin: 20px auto;
     }
+
+    section {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
 }
