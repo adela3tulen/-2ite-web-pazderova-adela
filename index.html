@@ -12,48 +12,71 @@
     <nav>
         <h1 id="a_p">ADÉLA PAZDEROVÁ</h1>
 
-        <ul id="menu">
+        <!--<ul>
             <li><a href="#uvod">Úvod</a></li>
             <li><a href="#omne">O mně</a></li>
-            <li><a href="#funfacts">Funfacts</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
+        </ul>-->
 
-        <button id="btn" data-block="button">Změnit motiv</button>
+        <button id="btn">Změnit motiv</button>
 
     </nav>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="background" data-speed="0.5">
+                <image href="star.svg" width="100%" height="100%" />
+            </div>
+            <div id="uvod">
+                <div class="pin-wrapper">
+                    <h1 class="hello-text">Vítejte na mém webu</h1>
+                    <lottie-player id="tulen" src="animace/Cute seal.json" background="transparent"
+                        style="width: 300px; height: 300px;">
+                    </lottie-player>
+                </div>
 
-    <section id="uvod">
-        <h1>Vítejte na mém webu</h1>
-        <p></p>
-    </section>
+            </div>
 
 
-    <section id="omne">
-        <h1>O mně</h1>
-        <p>IT student</p>
+            <section id="omne">
+                <div class="section-heading-container">
+                    <svg class="section-border-svg">
+                        <rect class="section-border-rect" x="0" y="0" width="100%" height="100%" rx="15" ry="15"></rect>
+                    </svg>
+                    <h1>O mně</h1>
+                </div>
+                <p>IT student</p>
 
-    </section>
+            </section>
 
-    <section id="funfacts">
-        <h1>Funfacts</h1>
-        <p></p>
+            <section id="kontakt">
+                <div class="section-heading-container">
+                    <svg class="section-border-svg">
+                        <rect class="section-border-rect" x="0" y="0" width="100%" height="100%" rx="15" ry="15"></rect>
+                    </svg>
+                    <h1>Kontakt</h1>
+                </div>
+                <br>
+                <p>Můj Instagram:
+                    <a href="https://www.instagram.com/adel._.kebab/" target="_blank">Otevřít profil</a>
+                </p>
+                <p>Můj GitHub:
+                    <a href="https://github.com/adela3tulen" target="_blank">Otevřít profil</a>
+                </p>
+                <p>Můj email: adela.pazderova08@gmail.com</p>
 
-    </section>
+            </section>
+        </div>
+    </div>
 
-    <section id="kontakt">
-        <h1>Kontakt</h1>
-        <br>
-        <p id="ig">Můj Instagram:
-            <a href="https://www.instagram.com/adel._.kebab/" target="_blank">Otevřít profil</a>
-        </p>
-        <p id="github">Můj GitHub:
-            <a href="https://github.com/adela3tulen" target="_blank">Otevřít profil</a>
-        </p>
-        <p id="email">Můj email: adela.pazderova08@gmail.com</p>
-    </section>
+
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+
 </body>
 
 </html>
