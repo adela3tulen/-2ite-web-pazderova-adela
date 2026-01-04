@@ -41,14 +41,24 @@ body {
     filter: var(--star-filter);
 }
 
-nav {
+.header {
+    z-index: 1001;
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0px;
+    align-items: center;
+    background: var(--nav-bg-gradient);
+}
+
+.nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--nav-bg-gradient);
     padding: 5px 20px;
     position: fixed;
-    top: 0;
+    top: 8%;
     width: 100%;
     z-index: 1000;
     left: 0;
@@ -70,7 +80,7 @@ section {
 
 
 #uvod {
-    margin-top: 50px;
+    margin-top: 8%;
     max-height: 100vh;
     height: 80vw;
     padding: 0;
@@ -125,7 +135,7 @@ section {
     margin: 10px 0;
 }
 
-#btn {
+.theme-btn {
     border-radius: 50px;
     margin: 10px;
     background: var(--button-gradient);
@@ -137,6 +147,17 @@ section {
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s;
+}
+
+.theme-btn-small {
+    top: -40px;
+    right: 10px;
+    position: fixed;
+    height: 5vh;
+    width: 5vh;
+    padding: 0;
+    border-radius: 30px;
+    margin: 0;
 }
 
 #btn:hover {
@@ -162,7 +183,7 @@ section {
 
 #kontakt {
     height: 100px;
-    min-height: calc(100vh - 350px);
+    min-height: calc(100vh - 300px);
 }
 
 section p a {

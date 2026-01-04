@@ -63,6 +63,27 @@ document.addEventListener('DOMContentLoaded', () => {
         scale: 0.5,
     });
 
+    const nv = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#uvod",
+            start: "top 1px",
+            end: "top 5px",
+            toggleActions: "restart none restart reverse"
+        }
+    });
+
+    nv.to(".nav", {
+        y: "-100px",
+        duration: 0.5,
+        ease: "power1.inOut"
+    });
+
+    nv.to(".theme-btn-small", {
+        y: "50px",
+        duration: 0.5,
+        ease: "power1.inOut"
+    });
+
     const tweens = {};
 
     const borderRects = document.querySelectorAll(".section-border-rect");
