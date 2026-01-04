@@ -28,24 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const btn = document.getElementById('btn');
-
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
     }
-
-    btn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-
-        let theme = 'light';
-        if (document.body.classList.contains('dark-mode')) {
-            theme = 'dark';
-        }
-        localStorage.setItem('theme', theme);
-    });
-
-
 
     const tl = gsap.timeline({
         scrollTrigger: {
@@ -163,3 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    let theme = 'light';
+    console.log(document.body.classList.contains('dark-mode'));
+    if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark';
+    }
+    localStorage.setItem('theme', theme);
+}

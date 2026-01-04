@@ -160,13 +160,13 @@ section {
     margin: 0;
 }
 
-#btn:hover {
+.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
 }
 
-#btn:active {
+.btn:active {
     transform: translateY(1px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -296,7 +296,7 @@ ul.v-slides {
         padding: 10px;
     }
 
-    #btn {
+    .btn {
         width: 80%;
         margin-top: 10px;
     }
