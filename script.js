@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         speed: 1
     });
 
-    // Generate random stars
     const background = document.querySelector('.background');
     if (background) {
-        background.innerHTML = ''; // Clear placeholder
+        background.innerHTML = '';
         for (let i = 0; i < 500; i++) {
             const star = document.createElement('img');
             star.src = 'star.svg';
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#uvod",
-            start: "top top", // Pin below the nav bar
+            start: "top top",
             end: "bottom center",
             scrub: 0,
             pin: ".pin-wrapper",
@@ -76,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const section = rect.closest("section");
 
-        // Store the tween
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
@@ -97,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tweens[section.id] = tl;
     });
 
-    // Replay animation on click
     const menuLinks = document.querySelectorAll("nav ul li a");
     menuLinks.forEach(link => {
         link.addEventListener("click", (e) => {
@@ -108,4 +105,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const slides = document.querySelectorAll('.v-slide');
+    const list = document.querySelector('.v-slides');
+    const duration = 6;
+    const lineHeight = 100;
+    const vSlide = gsap.timeline({
+        paused: true,
+        repeat: -1
+    });
+    slides.forEach((slide, i) => {
+        vSlide.to(list, {
+            duration: duration / slides.length,
+            y: i * -1 * lineHeight,
+            ease: "elastic.out(1, 0.4)"
+        });
+    });
+    vSlide.play();
+
+    const discordLink = document.getElementById('discord-link');
+    if (discordLink) {
+        discordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const originalContent = '<i class="fa-brands fa-discord icon"></i>';
+
+            if (discordLink.getAttribute('data-showing-text') === 'true') return;
+
+            discordLink.setAttribute('data-showing-text', 'true');
+            discordLink.innerHTML = '<span class="icon" style="font-size: 20px; font-weight: bold; font-family: sans-serif;">adik._.1</span>';
+
+            setTimeout(() => {
+                discordLink.innerHTML = originalContent;
+                discordLink.setAttribute('data-showing-text', 'false');
+            }, 5000);
+        });
+    }
+
 });
+
