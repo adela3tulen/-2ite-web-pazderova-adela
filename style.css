@@ -311,4 +311,22 @@ ul.v-slides {
         min-height: auto;
         padding-bottom: 50px;
     }
+
+    .v-slider-frame {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+        padding: 10px 0;
+        margin: 20px auto;
+    }
+
+    .social-icons .icon {
+        margin: 10px;
+        font-size: 30px;
+    }
 }
