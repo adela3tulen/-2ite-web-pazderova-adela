@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "#uvod",
             start: "top top",
-            end: "bottom center",
+            end: () => window.innerWidth < 768 ? "bottom top" : "bottom center",
             scrub: 0,
             pin: ".pin-wrapper",
             markers: false
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nv = gsap.timeline({
         scrollTrigger: {
             trigger: "#uvod",
-            start: "top 1px",
+            start: "top -100px",
             end: "top 5px",
             toggleActions: "restart none restart reverse"
         }
