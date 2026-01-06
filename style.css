@@ -285,6 +285,14 @@ ul.v-slides {
         flex-direction: column;
     }
 
+    #kontakt {
+        min-height: calc(100vh - 350px);
+    }
+
+    #a_p {
+        font-size: 20px;
+    }
+
     .hello-text {
         white-space: normal;
         font-size: 10vw;
@@ -312,9 +320,18 @@ ul.v-slides {
         padding-bottom: 50px;
     }
 
+    .container {
+        padding: 30px;
+    }
+
     .v-slider-frame {
-        width: 90%;
+        width: 200px;
         margin: 0 auto;
+    }
+
+    .v-slide {
+        font-size: 30px;
+        line-height: 100px;
     }
 
     .social-icons {
@@ -326,7 +343,7 @@ ul.v-slides {
     }
 
     .social-icons .icon {
-        margin: 10px;
-        font-size: 30px;
+        margin: 5px;
+        font-size: 25px;
     }
 }
